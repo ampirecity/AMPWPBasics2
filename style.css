@@ -1,0 +1,286 @@
+/*
+Theme Name: Safari
+Theme URI: www.webpark.lt
+Author: Webpark
+Author URI: www.webpark.lt
+Description: Created for safari.lt. For your personal theme, please contact us at info@webpark.lt
+Version: 0.1
+License: Attribution 2.0 Generic (CC BY 2.0)
+License URI: https://creativecommons.org/licenses/by/2.0/
+Tags: Webpark, AMP
+Text Domain: safari
+
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+html, ul, li, h1, figure {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Theme Core */
+h1, h2, h3, h4, h5, p, a {
+	font-family: 'Exo', sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  margin:0px;
+}
+h1 {
+	font-size:60px;
+}
+h2 {
+	font-size:36px;
+}
+h3 {
+	font-size:24px;
+}
+h4 {
+	font-size:18px;
+}
+h5 {
+	font-size:14px;
+}
+p {
+	font-size:16px;
+  margin:15px 0;
+}
+a {
+  transition:all 0.2s ease-out;
+  text-decoration: none;
+}
+a:hover {
+  color:#1DA838;
+}
+/****
+* Main layout
+*****/
+.display-desktop {
+  display:none;
+}
+.header {
+  margin:25px 30px 15px 15px;
+}
+.content-wrapper {
+  padding:30px 15px;
+}
+@media (min-width:1024px) {
+  .display-desktop {
+    display:inline-block;
+  }
+  .header {
+    margin:30px;
+  }
+  .header__content > * {
+    display:inline-block;
+  }
+  .content-wrapper {
+    padding:90px 0px;
+  }
+}
+
+/****
+* Header
+*****/
+
+.amp-logo,
+.header__content {
+  display:inline-block;
+}
+.header__content {
+  float:right;
+}
+
+.menu__phone {
+  font-weight:900;
+  font-style: italic;
+  margin-right:30px;
+}
+.dark-header .menu__phone {
+  color:#fff;
+}
+.light-header .menu__phone {
+  color:#222;
+}
+/*breadcrumbs*/
+#breadcrumbs span span a {
+  color:#222222;
+}
+#breadcrumbs span span a:hover,
+.breadcrumb_last {
+  color:#1DA838;
+}
+
+/****
+* AMP Sidebar
+*****/
+    amp-sidebar {
+        width: 300px;
+        min-height:500px;
+    }
+    amp-sidebar .amp-logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom:30px;
+    }
+    .hamburger {
+      position: relative;
+      z-index: 10;
+      top: 6.5px;
+      cursor: pointer;
+  }
+    .hamburger span {
+        width: 26px;
+        height: 4px;
+        background: rgba(79, 79, 79, 1);
+        margin: 4px 0;
+        display:block;
+    }
+
+    #sidebar {
+        background: #222222;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }   
+    .sidebar {
+      max-width: 100%; 
+    }
+    .sidebar:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background: rgba(0, 0, 0, 0.6);
+        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.6);
+    }
+    .sidebar ul {
+        margin:0;
+        padding:0px;
+    }
+    .sidebar > ul {
+        border-bottom:1px solid rgba(255, 255, 255, 0.05);
+    }
+    .sidebar li {
+        list-style: none;
+    }
+    .sidebar > ul > li > a,
+    .sidebar ul li ul {
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        padding: 15px 20px 12px;
+    }
+    .sidebar > ul > li > a {
+        padding: 15px 20px 12px;
+    }
+    .sidebar ul li ul {
+        padding: 5px 20px 0px;
+    }
+    .sidebar > ul > li > a,
+    .sidebar ul li ul li a {
+        color: #cccccc;
+        text-decoration: none;
+        display:block;
+    }
+    .sidebar ul li ul li a {
+        padding-left:10px;
+        line-height:1em;
+        margin-bottom:15px;
+        margin-top:15px;
+    }
+    .sidebar .current-menu-item a,
+    .sidebar > ul > li > a:hover,
+    .sidebar ul li ul li a:hover {
+        color: #fff;
+        border-left: 5px solid #1da838;
+    }
+    .close-sidebar {
+        font-size: 25px;
+        padding: 30px 30px 10px;
+        color:#f8f4f2;
+        text-align: right;
+        cursor:pointer;
+    }
+    .sidebar__title {
+      padding:0px 20px;
+      color:#ccc;
+    }
+    .sidebar__post {        
+        padding:0 20px;
+        position:relative;
+    }
+    .sidebar__post.post__parent .overlay {
+        left:20px;
+        right:20px;
+    }
+    .sidebar__post .header__heading {
+        padding: 0 20px;
+        bottom: 20px;
+    }
+    .sidebar__post.post__parent {
+        padding-bottom:0px;
+    }
+    .sidebar__post.post__parent .post-date {
+        position:static;
+    }
+    .sidebar__post.post__parent h2 {
+        font-size:21px;
+    }
+    .copyright {
+      position:absolute;
+      bottom:0px;
+      text-align:center;
+      width:100%;
+      margin-bottom:20px;
+    }
+    .copyright p {
+      color:#555555;
+      font-size:12px;
+      margin:10px 0;
+    }
+    .copyright a {
+      color:#999;
+    }
+    .copyright a:hover {
+    color:#1DA838;
+  }
+
+/****
+* Content
+*****/
+.content__segment {
+  text-align:center;
+}
+.content__segment > * {
+  margin-left:auto;
+  margin-right:auto;
+  max-width:970px;
+  text-align:left;
+}
+
+@media (min-width:1024px) {
+
+  /****
+  * AMP Sidebar
+  *****/
+
+  .menu > li:first-child {
+    display:none;
+  }
+  
+}
